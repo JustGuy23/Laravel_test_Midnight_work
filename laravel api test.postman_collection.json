@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "e43b0a29-9845-4464-a569-8f175c2785c3",
+		"name": "laravel api test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26811279"
+	},
+	"item": [
+		{
+			"name": "register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/register?email=2345345r@sdfgdfb23434&password=345545dfvd&name=vasea",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "2345345r@sdfgdfb23434"
+						},
+						{
+							"key": "password",
+							"value": "345545dfvd"
+						},
+						{
+							"key": "name",
+							"value": "vasea"
+						}
+					]
+				},
+				"description": "login user\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "login by user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/login?email=johndoe@mail.ru&password=password123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "johndoe@mail.ru"
+						},
+						{
+							"key": "password",
+							"value": "password123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "main page",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "31|xQ6FBJDz2Mt9MoZVDPRzO1DlzZsTF8nGkWKXUIbv",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "johndoe@mail.ru",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "password123",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get posts page",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "25|gYCPYBkoUW0lRSHmpoKFka0zgqVEPPoj79xdu5q9",
+						"type": "text"
+					},
+					{
+						"key": "email",
+						"value": "johndoe@mail.ru",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "redirect from login test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "email",
+						"value": "johndoe@mail.ru",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "password123",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/login?email=johndoe@mail.ru&password=password123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "johndoe@mail.ru"
+						},
+						{
+							"key": "password",
+							"value": "password123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post article",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "25|gYCPYBkoUW0lRSHmpoKFka0zgqVEPPoj79xdu5q9",
+						"type": "text"
+					},
+					{
+						"key": "email",
+						"value": "johndoe@mail.ru",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/posts?title=3435qw342q3w423r2wds&content=fine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "3435qw342q3w423r2wds"
+						},
+						{
+							"key": "content",
+							"value": "fine"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
